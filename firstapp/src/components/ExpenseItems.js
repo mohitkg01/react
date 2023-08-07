@@ -1,12 +1,20 @@
+import './ExpenseItem.css'
 function ExpenseItems(){
-    return (
-    <>
-    <h2>Expense Items </h2>
-    <h2><div>Food Rs 10 </div>
-    <div>Petrol Rs 100</div>
-    <div>Movies Rs 200</div></h2>
-    </>
+    const expenseDate=new Date();
+    const expenseTitle="Buy Some Food";
+    const expenseAmount=250;
+    const expenseLocation="Patna";
     
+    return (
+   <div className="expense-item">
+    <div>{expenseDate.toString()}</div>
+    <div className="expense-desc">
+        <h2>{expenseTitle}</h2>
+        <div className="expense-price">{expenseAmount}</div>
+        <div className="expense-loc">{expenseLocation}</div>
+    </div>
+   </div>
+   
     )
 }
 export  default ExpenseItems;
