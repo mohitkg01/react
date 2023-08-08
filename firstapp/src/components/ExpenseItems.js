@@ -1,17 +1,12 @@
 import './ExpenseItem.css'
-function ExpenseItems(){
-    const expenseDate=new Date();
-    const expenseTitle="Buy Some Food";
-    const expenseAmount=250;
-    const expenseLocation="Patna";
-    
+function ExpenseItems(props){
     return (
    <div className="expense-item">
-    <div>{expenseDate.toString()}</div>
+    <div>{props.date.toString()}</div>
     <div className="expense-desc">
-        <h2>{expenseTitle}</h2>
-        <div className="expense-price">{expenseAmount}</div>
-        <div className="expense-loc">{expenseLocation}</div>
+        <h2>{props.title}</h2>
+        <div className="expense-price">{props.amount}</div>
+        <div className="expense-loc">{props.loc}</div>
     </div>
    </div>
    
