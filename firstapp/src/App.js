@@ -1,6 +1,8 @@
-import ExpenseItems from "./components/ExpenseItems";
-function App() {
-  const expense=[{
+import Expenses from './components/Expenses/Expensese';
+import React from 'react';
+
+const App = ()=> {
+  const expenseData=[{
     id:1,
     expen:'Buy food',
     amount:1000,
@@ -27,13 +29,9 @@ function App() {
   },
 ];
   return (
-  <>
-  <h2>Expense Tracker</h2>
-  {
-    expense.map((item)=>(
-    <ExpenseItems  key={item.id} title={item.expen} amount={item.amount} date={item.date} loc={item.loc}/>))
-  }
-  </>
+  <div>
+    <h2>Expense Tracker</h2>
+  <Expenses expense={expenseData}/></div>
   );
 }
 
