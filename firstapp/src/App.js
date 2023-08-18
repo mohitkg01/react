@@ -19,7 +19,7 @@ const App = ()=> {
     id:3,
     expen:'Clothes',
     amount:1000,
-    date:new Date(2023,11,5),
+    date:new Date(2021,11,5),
     loc:'bihar'
   },{
     id:4,
