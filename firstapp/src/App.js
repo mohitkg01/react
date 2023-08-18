@@ -1,9 +1,9 @@
 import Expenses from './components/Expenses/Expensese';
 import React from 'react';
 import NewExpense from './components/NewExpense/NewExpense';
-
+import { useState } from 'react';
 const App = ()=> {
-  const expenseData=[{
+  const [expenseData,setExpenseData]= useState([{
     id:1,
     expen:'Buy food',
     amount:1000,
@@ -28,11 +28,15 @@ const App = ()=> {
     date:new Date(2023,10,2),
     loc:'Gorkhpur'
   },
-];
+]);
+const addExpenseHandler=expense=>{
+  setExpenseData((prevExpenseData)=>[...prevExpenseData,expense])
+};
+
   return (
   <div>
     <h2>Expense Tracker</h2>
-    <NewExpense/>
+    <NewExpense onAddExpense={addExpenseHandler}/>
   <Expenses expense={expenseData}/>
   
   </div>
