@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import './Expenses.css';
 import ExpensesFilter from './ExpenseFilter';
 import { useState } from 'react';
+import ExpensesChart from './ExpensesChart';
 
 const Expenses=(props)=>{
   
@@ -31,6 +32,7 @@ const Expenses=(props)=>{
              <Card className="exp">
             <ExpensesFilter selected={filteredYear}
              onChangeFilter={filterChangedHandler}/>
+             <ExpensesChart expenses={filteredExpenses}/>
               {lengthExpense}
              {/* {filteredExpenses.length=== 0 ? (<p>No expense found.</p>):(filteredExpenses.map((items)=> (
             <ExpenseItem 
@@ -42,9 +44,6 @@ const Expenses=(props)=>{
               )
           )
          } */ expenseContent}
-        
-       
-
   </Card>
 </div>
        
